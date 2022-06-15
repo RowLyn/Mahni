@@ -16,7 +16,7 @@ import pyrogram
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-@app.on_message(pyrogram.filters.command(["axtar"]))
+@app.on_message(pyrogram.filters.command(["ytaxtar"]))
 async def ytsearch(_, message: Message):
     try:
         if len(message.command) < 2:
