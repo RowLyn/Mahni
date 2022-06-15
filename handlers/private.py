@@ -84,7 +84,8 @@ async def cbmelumat(_, query: CallbackQuery):
           InlineKeyboardButton(
             "⚙ Quraşdırıcı", url="https://t.me/Rowlyn")
         
-      ]))
+      ]
+      ))
      
 
 
