@@ -6,7 +6,7 @@ from helpers.decorators import errors, authorized_users_only
 from config import SUDO_USERS 
 import asyncio
 
-@Client.on_message(filters.group & filters.command(["qatıl", "asistan"]))
+@Client.on_message(filters.group & filters.command(["asal", "asistan"]))
 @authorized_users_only
 @errors
 async def addchannel(client, message):
