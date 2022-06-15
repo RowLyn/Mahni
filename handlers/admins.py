@@ -16,7 +16,7 @@ from pytgcalls.types.input_stream import InputStream
 
 ACTV_CALLS = []
 
-@Client.on_message(command(["durdur", "pause"]) & other_filters)
+@Client.on_message(command(["dayandır", "pause"]) & other_filters)
 @errors
 @authorized_users_only
 async def durdur(_, message: Message):
