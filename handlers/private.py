@@ -84,8 +84,8 @@ async def cbbilgi(_, query: CallbackQuery):
           InlineKeyboardButton(
             "⚙ Quraşdırıcı", url="https://t.me/Rowlyn")
         
-      ]
-     ))
+      ]))
+     
 
 
 @Client.on_callback_query(filters.regex("herkes"))
