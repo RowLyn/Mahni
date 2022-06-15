@@ -7,8 +7,6 @@ from helpers.filters import command, other_filters2
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
-                await message.reply_photo(
-                "https://i.ibb.co/khRz42f/Turkish-Voice.jpg",
                 caption=(f"""**Salam {message.from_user.mention} 🎧\nMen {bot}!\nSesli söhbetlerde mahnı oxuda bilen botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave edin.\n\nDesign By  [RowlynBots 🎰](https://t.me/BakuHouseChat).**"""),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -30,7 +28,7 @@ async def start(_, message: Message):
                         "💎 Emrler" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
-                        "Resmi Kanal 🇦🇿", url=f"https://t.me/RowlynBots"
+                        "Resmi Kanal 🇦🇿", url=f"https://t.me/Bh_resmi"
                     )
                 ]
                 
@@ -74,7 +72,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🔥Admin Komutları",callback_data ="admin")
+            "🔥Admin Emrleri",callback_data ="admin")
         ],
         [
           InlineKeyboardButton(
