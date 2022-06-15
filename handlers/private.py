@@ -81,14 +81,14 @@ async def cbbilgi(_, query: CallbackQuery):
         [
           InlineKeyboardButton(
             "⚙ Quraşdırıcı", url="https://t.me/Rowlyn")
-        ]
+        
       ]
      ))
 
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun herkes üçün emr menyusu 😝\n\n ▶️ /çallink - mahnı oxudmağ üçün youtube link'ine veya mahnı dosyasına cavab vererek işled\n ▶️ /çal <mahnı adı> - istediyiniz mahnını oxudun\n 🤙🏼 \n 🎵 /tap <mahnı adı> - istediyiniz mahnıları tam süretli şekilde tapın\n 🎵 /vbul istediyiniz videoları süretli şekilde tapın\n 🔍 /axtar <query> - youtube'da melumatları gösteren videoları axtarmağ\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun herkes üçün emr menyusu 😝\n\n ▶️ /çal - mahnı oxudmağ üçün youtube link'ine veya mahnı dosyasına cavab vererek işled\n ▶️ /çal <mahnı adı> - istediyiniz mahnını oxudun\n 🤙🏼 \n 🎵 /vmahnı <mahnı adı> - istediyiniz mahnıları tam süretli şekilde tapın\n 🎵 /vaxtar istediyiniz videoları süretli şekilde tapın\n 🔍 /axtar <query> - youtube'da melumatları gösteren videoları axtarmağ\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -106,7 +106,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün emr menyusu 💸\n\n ▶️ /davam - mahnını oxudmağa davam et\n ⏸️ /mdayandır - oxuyan musiqini müveqqeti dayandırmağ üçün\n 🔄 /keç- Oxunan Musiqini Keçer.\n ⏹ /son - mahnı oxudmağı dayandır\n 🔼 /ver botun sadece admin üçün işledile bilen  emrlerini işledmesi üçün istifadeçiye yetki ver\n 🔽 /al botun admin emrlerini istifade ede bilen istifadeçinin yetkisini al\n\n ⚪ /asal - Mahnı asistanı grubunuza qatılır.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün emr menyusu 💸\n\n ▶️ /davam - mahnını oxudmağa davam et\n ⏸️ /dayandır - oxuyan musiqini müveqqeti dayandırmağ üçün\n 🔄 /keç- Oxunan Musiqini Keçer.\n ⏹ /bitirmek - mahnı oxudmağı dayandır\n 🔼 /ver botun sadece admin üçün işledile bilen  emrlerini işledmesi üçün istifadeçiye yetki ver\n 🔽 /al botun admin emrlerini istifade ede bilen istifadeçinin yetkisini al\n\n ⚪ /asal - Mahnı asistanı grubunuza qatılır.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
