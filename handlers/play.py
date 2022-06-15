@@ -133,7 +133,7 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>⚡ Flood Wair Xetası ⚡</b> \n\Salam {user.first_name}, Asistan  çoxlu qatılma istekleri olduğu üçün grubunuza qatılmadı. Asistan'ın grubda yasağlı olmadığından emin olun ve daha sonra yeniden yoxlayın!")
+                        f"<b>⚡ Flood Wait Xetası ⚡</b> \n\Salam {user.first_name}, Asistan  çoxlu qatılma istekleri olduğu üçün grubunuza qatılmadı. Asistan'ın grubda yasağlı olmadığından emin olun ve daha sonra yeniden yoxlayın!")
     try:
         await USER.get_chat(chid)
     except:
@@ -199,7 +199,7 @@ async def play(_, message: Message):
         [
             [
                 InlineKeyboardButton("🔥 İnfo", url=f"https://t.me/BakuHouseMusicBot"),
-                InlineKeyboardButton("🎰 Kanal", url=f"https://t.me/RowlynBots"),
+                InlineKeyboardButton("🎰 Kanal", url=f"https://t.me/Bh_resmi"),
             ],[
                 InlineKeyboardButton("📲 bağla", callback_data="cls"),
             ],
@@ -232,7 +232,7 @@ async def play(_, message: Message):
         await lel.edit("🔎 ** gözleyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🔄 **Ses hazırlanır..🔥**")
+        await lel.edit("🔄 **Ses hazırlanır⚡**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -264,7 +264,7 @@ async def play(_, message: Message):
         [
             [
                 InlineKeyboardButton("🚀 İnfo", url=f"https://t.me/BakuHouseMusicBot"),
-                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/RowlynBots"),
+                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Bh_resmi"),
             ],[
                 InlineKeyboardButton("📲 Bağla", callback_data="cls"),
             ],
@@ -286,7 +286,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**🎵 mahnı:** {}\n**🕒 müddet:** {} min\n**👉 ᴇᴋʟᴇʏᴇɴ:** {}\n\n**🫀 Sıra:** {}".format(
+        caption="**🎧 Mahnı:** {}\n**🕒 Müddet:** {} min\n**🤍 Sifariş Eden:** {}\n\n**🫀 Sıra:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -306,7 +306,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎵 mahnı:** {}\n**🕒 müddet:** {} min\n**👉 ᴇᴋʟᴇʏᴇɴ:** {}\n\n**☑️ İndi Bu  deqiqe `{}`...**".format(
+        caption="**🎧 Mahnı:** {}\n**🕒 Müddet:** {} min\n**🤍 sifariş Eden:** {}\n\n**☑️ İndi Oxunduğu Grub `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
