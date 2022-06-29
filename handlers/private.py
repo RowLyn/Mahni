@@ -14,15 +14,15 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "😴 ❰ Grubuna elave et ❱ ✝️", url=f"https://t.me/BakuHouseMusicBot?startgroup=true"
+                        "😴 ❰ Grubuna elave et ❱ ✝️", url=f"https://t.me/BakuAzMusicBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎥 Asistan", url="https://t.me/BakuHouseMusicAsistan"
+                        "🎥 Asistan", url="https://t.me/BakuAzMusicAsistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/BakuHouseChat"
+                        "💬 Söhbet", url="https://t.me/BakuCity"
                     )
                 ],
                 [
@@ -30,7 +30,7 @@ async def start(_, message: Message):
                         "💎 Emrler" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
-                        "Resmi Kanal 🇦🇿", url=f"https://t.me/Bh_resmi"
+                        "Resmi Kanal 🇦🇿", url=f"https://t.me/RowlynBots"
                     )
                 ]
                 
@@ -47,7 +47,7 @@ async def melumat(_, message: Message):
              [
                  [
                      InlineKeyboardButton(
-                         "❤️ Herkes üçün emrler", callback_data="emr")
+                         "❤️ Hamı üçün emrler", callback_data="emr")
                  ],[                     
                      InlineKeyboardButton(
                          "🖤 Admin üçün emrler", callback_data="admin")
@@ -70,7 +70,7 @@ async def cbmelumat(_, query: CallbackQuery):
       [
         [
           InlineKeyboardButton(
-            "✨Herkes üçün Emrler", callback_data ="herkes")
+            "✨Hamı üçün Emrler", callback_data ="herkes")
         ],
         [
           InlineKeyboardButton(
@@ -132,15 +132,15 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "✝️ ❰ Grubuna Elave Et ❱ ✝️", url=f"https://t.me/BakuHouseMusicBot?startgroup=true"
+                        "✝️ ❰ Grubuna Elave Et ❱ ✝️", url=f"https://t.me/BakuAzMusicBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎥 Asistan", url="https://t.me/BakuHouseMusicAsistan"
+                        "🎥 Asistan", url="https://t.me/BakuAzMusicAsistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/BakuHouseChat"
+                        "💬 Söhbet", url="https://t.me/BakuCity"
                     )
                 ],
                 [
