@@ -22,7 +22,7 @@ async def start(_, message: Message):
                         "🎥 Asistan", url="https://t.me/BakuAzMusicAsistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/BakuCity"
+                        "💬 Söhbet", url="https://t.me/BakuCity_Az"
                     )
                 ],
                 [
@@ -140,7 +140,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🎥 Asistan", url="https://t.me/BakuAzMusicAsistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/BakuCity"
+                        "💬 Söhbet", url="https://t.me/BakuCity_Az"
                     )
                 ],
                 [
