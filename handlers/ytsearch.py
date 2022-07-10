@@ -17,19 +17,19 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @app.on_message(pyrogram.filters.command(["ytaxtar"]))
-async def ytsearch(_, message: Message):
+async def ytaxtar(_, message: Message):
     try:
         if len(message.command) < 2:
             await message.reply_text("Mene senedçi adı ya da Mahnı adı verin!")
             return
         query = message.text.split(None, 1)[1]
-        m = await message.reply_text("Axtarıram....")
+        m = await message.reply_text("Axtarıram⚡")
         results = YoutubeSearch(query, max_results=4).to_dict()
         i = 0
         text = ""
         while i < 4:
-            text += f"Ad - {results[i]['title']}\n"
-            text += f"Vaxt - {results[i]['duration']}\n"
+            text += f"Musiqi Adı - {results[i]['title']}\n"
+            text += f"Musiqi Müddəti - {results[i]['duration']}\n"
             text += f"Baxış Sayı - {results[i]['views']}\n"
             text += f"Kanal - {results[i]['channel']}\n"
             text += f"https://youtube.com{results[i]['url_suffix']}\n\n"
