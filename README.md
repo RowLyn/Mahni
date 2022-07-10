@@ -1,21 +1,21 @@
-<h2 align="centre">Telegram Sohbet Mp3 Oynatıcı 🎵</h2>
+<h2 align="centre">Telegram Sesli Söhbetde Mahnı Oxuducu 🎵</h2>
 
-### Güncellendi aktif.... 😇
+### Aktiv Olarağ İşləyir
 <p align="center">
   <img src="https://telegra.ph/file/a4fa687ed647cfef52402.jpg">
 </p> 
 
-<h3>Sürümler 📮</h3>
+<h3>Versiyalar 📮</h3>
 
 - pyrogram Set according to your request
 
-### Komutlar Genel 🍭
-- `/play` - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme
-- `/play` - istediğiniz şarkıyı çal
-- `/bul` - istediğiniz şarkıları hızlı bir şekilde indirin 
-- `/ara` - youtube'da ayrıntıları içeren videoları arama
+### Hərkəs Üçün Əmrlər ⚡
+- `/çal` - şarkı çalmak için youtube url'sine veya şarkı dosyasına yanıt verme
+- `/çal` - istediğiniz şarkıyı çal
+- `/vaxtar` - istediğiniz şarkıları hızlı bir şekilde indirin 
+- `/axtar` - youtube'da ayrıntıları içeren videoları arama
 
-#### Yalnızca yöneticiler 
+#### Sadəcə Adminler Üçün
 - `/ver` - üyeler için extra yetki 
 - `/al` - üyeler için verilen yetki alınır (Herkes için olan komutları kullanır) 
 - `/pause` - şarkı çalmayı duraklatma 
