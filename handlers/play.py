@@ -87,12 +87,12 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-# ==================================EfsaneVaves======================================================== 
+# ==================================Rowlyn Music V6======================================================== 
 @Client.on_callback_query(filters.regex("cls"))
 async def cls(_, query: CallbackQuery):
     await query.message.delete()
 
-# EfsaneMusicVaves düzenlenmiştir.
+# Efsane Music Waves  Mənim Sikimi Yeyir😝.
 
 @Client.on_message(command(["play", "çal"]) 
                    & filters.group
@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **ʟüᴛꜰᴇɴ ʙᴇᴋʟᴇʏiɴiᴢ...**")
+    lel = await message.reply("Mahnı Hazırlanır⚡")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "BakuHouseMusicAsistan"
+        user.first_name = "NemesisMusicAsistan"
     usar = user
     wew = usar.id
     try:
@@ -138,7 +138,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>Salam {user.first_name}, Asistan bu söhbette deyil, adminlerden göndermesini istiyin /play ilk kez eklemek için komut.</i>")
+            f"<i>Salam {user.first_name}, Asistan bu söhbette deyil, adminlerden göndermesini istiyin /asal asistanı elave etmek üçün əmr.</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🔥 İnfo", url=f"https://t.me/BakuHouseMusicBot"),
-                InlineKeyboardButton("🎰 Kanal", url=f"https://t.me/Bh_resmi"),
+                InlineKeyboardButton("🔥 İnfo", url=f"https://t.me/NemesisMusicRoBot"),
+                InlineKeyboardButton("🎰 Kanal", url=f"https://t.me/RowlynBots"),
             ],[
                 InlineKeyboardButton("📲 bağla", callback_data="cls"),
             ],
@@ -228,11 +228,11 @@ async def play(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🏆 **Dinlemey istediyin mahnı adı?**")
-        await lel.edit("🔎 ** gözleyin...**")
+            return await lel.edit("🏆 Dinlemey istediyin mahnı adı?")
+        await lel.edit("Gözleyin💸")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🔄 **Ses hazırlanır⚡**")
+        await lel.edit("Ses hazırlanır⚡")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🚀 İnfo", url=f"https://t.me/BakuHouseMusicBot"),
-                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Bh_resmi"),
+                InlineKeyboardButton("🚀 İnfo", url=f"https://t.me/NemesisMusicRoBot"),
+                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/RowlynBots"),
             ],[
                 InlineKeyboardButton("📲 Bağla", callback_data="cls"),
             ],
@@ -286,7 +286,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**🎧 Mahnı:** {}\n**🕒 Müddet:** {} min\n**🤍 Sifariş Eden:** {}\n\n**🫀 Sıra:** {}".format(
+        caption="**🎧 Mahnı Adı:** {}\n**🕒 Mahnı Müddəti:** {} min\n**🤍 Sifariş Edən:** {}\n\n**🫀 Mahnı Sırası:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -306,7 +306,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎧 Mahnı:** {}\n**🕒 Müddet:** {} min\n**🤍 sifariş Eden:** {}\n\n**☑️ İndi Oxunduğu Grub `{}`...**".format(
+        caption="**🎧 Mahnı Adı:** {}\n**🕒 Mahnı Müddəti:** {} min\n**🤍 sifariş Edən:** {}\n\n**☑️ İndi Oxunduğu Grub `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
