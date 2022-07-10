@@ -54,7 +54,7 @@ async def rem(USER, message):
         )
         return
  
-@USER.on_message(filters.group & filters.command(["userbotleave"]))
+@USER.on_message(filters.group & filters.command(["çıx"]))
 @authorized_users_only
 async def rem(USER, message):
     try:
