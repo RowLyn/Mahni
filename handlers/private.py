@@ -9,20 +9,20 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://images.app.goo.gl/nN5D6nR5ZKEgLmLa6",
-  caption=(f"""**Salam {message.from_user.mention} 🎧\nMen {bot}!\nSesli söhbetlerde mahnı oxuda bilen botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave edin.\n\nDesign By  [RowlynBots 🎰](https://t.me/BakuHouseChat).**"""),
+  caption=(f"""**Salam {message.from_user.mention} 🎧\nMen {bot}!\nSesli söhbetlerde mahnı oxuda bilen botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave edin.\n\nDesign By  [RowlynBots 🎰](https://t.me/NemesisChat).**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "😴 ❰ Grubuna elave et ❱ ✝️", url=f"https://t.me/BakuAzMusicBot?startgroup=true"
+                        "😴 ❰ Grubuna elave et ❱ ✝️", url=f"https://t.me/nemesismusicrobot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎥 Asistan", url="https://t.me/BakuAzMusicAsistan"
+                        "🎥 Asistan", url="https://t.me/NemesisMusicAsistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/BakuCity_Az"
+                        "💬 Söhbet", url="https://t.me/NemesisChat"
                     )
                 ],
                 [
@@ -42,7 +42,7 @@ async def start(_, message: Message):
 
 @Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}"]))
 async def melumat(_, message: Message):
-      await message.reply_text(" ❗ Önemli:\n Botun aktif çalışması üçün bu üç yetkiye ehtiyacı var:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
+      await message.reply_text(" ❗ Önemli:\n Botun İşləməsi Üçün Bu üç yetkini bota verin:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -65,7 +65,7 @@ async def melumat(_, message: Message):
 
 @Client.on_callback_query(filters.regex("cbmelumat"))
 async def cbmelumat(_, query: CallbackQuery):
-    await query.edit_message_text(" ❗ Önemli:\nBotun aktif çalışması üçün bu üç yetkiye ehtiyacı var:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
+    await query.edit_message_text(" ❗ Önemli:\nBotun İşləməsi Üçün Bu üç yetki Lazımdır:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
       [
         [
@@ -127,20 +127,20 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMen {bot}!\nSesli söhbetlerde mahnı oxuda bilen botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave et.\n\nDesign By [RowlynBots 😝](https://t.me/BakuHouseChat).**""",
+    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMen {bot}!\nSesli söhbetlerde mahnı oxuda bilen botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave et.\n\nDesign By [RowlynBots 😝](https://t.me/NemesisChat).**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✝️ ❰ Grubuna Elave Et ❱ ✝️", url=f"https://t.me/BakuAzMusicBot?startgroup=true"
+                        "✝️ ❰ Grubuna Elave Et ❱ ✝️", url=f"https://t.me/nemesismusicrobot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎥 Asistan", url="https://t.me/BakuAzMusicAsistan"
+                        "🎥 Asistan", url="https://t.me/nemesismusicasistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/BakuCity_Az"
+                        "💬 Söhbet", url="https://t.me/Nemesischat"
                     )
                 ],
                 [
