@@ -3,34 +3,38 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 from config import BOT_USERNAME, BOT_NAME as bot
 from helpers.filters import command, other_filters2
-# EfsaneMusicVaves tarafından düzenlendi. 
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://images.app.goo.gl/nN5D6nR5ZKEgLmLa6",
-  caption=(f"""**Salam {message.from_user.mention} 🎧\nMen {bot}!\nSesli söhbetlerde mahnı oxuda bilen botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave edin.\n\nDesign By  [RowlynBots 🎰](https://t.me/NemesisChat).**"""),
+  caption=(f"""**Salam {message.from_user.mention} 🇦🇿\nMən {bot}!\nSəsli Söhbətlərdə Mahnı Oxuda Bilən Botam.Ban yetkisiz,Sesi idarə etmə yetkisi verib, Asistanı gruba elave edin.\n\nHazırlandı [ʙʀᴇɴᴅ ᴍᴜsɪᴠ🎰](https://t.me/BrendSupport).**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "😴 ❰ Grubuna elave et ❱ ✝️", url=f"https://t.me/nemesismusicrobot?startgroup=true"
+                        "Grubuna Əlavə Et➕", url=f"https://t.me/BrendMusicRoBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎥 Asistan", url="https://t.me/NemesisMusicAsistan"
+                        "🎥 Asistan", url="https://t.me/BrendMusicRoBot"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/NemesisChat"
+                        "💬 Brend Usər Bot", url="https://t.me/BrendUserBot"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💎 Emrler" , callback_data= "cbmelumat"
+                        "⚡ Brend Support", url="https://t.me/BrendUserBot"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "💎 Əmrlər" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
-                        "Resmi Kanal 🇦🇿", url=f"https://t.me/RowlynBots"
+                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/BrendUserBot"
                     )
                 ]
                 
@@ -42,7 +46,7 @@ async def start(_, message: Message):
 
 @Client.on_message(command(["melumat", f"melumat@{BOT_USERNAME}"]))
 async def melumat(_, message: Message):
-      await message.reply_text(" ❗ Önemli:\n Botun İşləməsi Üçün Bu üç yetkini bota verin:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
+      await message.reply_text("Botun İşləməsi Üçün Bu Üç Yetkini Bota Verin:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -65,7 +69,7 @@ async def melumat(_, message: Message):
 
 @Client.on_callback_query(filters.regex("cbmelumat"))
 async def cbmelumat(_, query: CallbackQuery):
-    await query.edit_message_text(" ❗ Önemli:\nBotun İşləməsi Üçün Bu üç yetki Lazımdır:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
+    await query.edit_message_text("Botun İşləməsi Üçün Bu üç yetki Lazımdır:\n- Mesaj silme yetkisi,\n- Bağlantı ile devet etme yetkisi,\n- Sesli söhbeti idare etme yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
       [
         [
@@ -91,7 +95,7 @@ async def cbmelumat(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun herkes üçün emr menyusu 😝\n\n ▶️ /çal - mahnı oxudmağ üçün youtube link'ine veya mahnı dosyasına cavab vererek işled\n ▶️ /çal <mahnı adı> - istediyiniz mahnını oxudun\n 🤙🏼 \n 🎵 /vmahnı <mahnı adı> - istediyiniz mahnıları tam süretli şekilde tapın\n 🎵 /vaxtar istediyiniz videoları süretli şekilde tapın\n 🔍 /axtar <query> - youtube'da melumatları gösteren videoları axtarmağ\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun herkes üçün emr menyusu 🔸\n\n ▶️ /play - mahnı oxudmağ üçün youtube link'ine veya mahnı dosyasına cavab vererek işled\n ▶️\n 🎵 /song <mahnı adı> - istediyiniz mahnıları tam süretli şekilde tapın\n 🎵 /videoaxtar istediyiniz videoları süretli şekilde tapın\n 🔍 /axtar <query> - youtube'da melumatları gösteren videoları axtarmağ\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -109,7 +113,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün emr menyusu 💸\n\n ▶️ /davam - mahnını oxudmağa davam et\n ⏸️ /dayandır - oxuyan musiqini müveqqeti dayandırmağ üçün\n 🔄 /keç- Oxunan Musiqini Keçer.\n ⏹ /bitirmek - mahnı oxudmağı dayandır\n 🔼 /ver botun sadece admin üçün işledile bilen  emrlerini işledmesi üçün istifadeçiye yetki ver\n 🔽 /al botun admin emrlerini istifade ede bilen istifadeçinin yetkisini al\n\n ⚪ /asal - Mahnı asistanı grubunuza qatılır.\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminler üçün emr menyusu 💸\n\n ▶️ /davam - mahnını oxudmağa davam et\n ⏸️ /dayandir - oxuyan musiqini müveqqeti dayandırmağ üçün\n 🔄 /kec- Oxunan Musiqini Keçer.\n ⏹ /bitirmek - mahnı oxudmağı dayandır\n 🔼 /ver botun sadece admin üçün işledile bilen  emrlerini işledmesi üçün istifadeçiye yetki ver\n 🔽 /al botun admin emrlerini istifade ede bilen istifadeçinin yetkisini al\n\n ⚪ /asal - Mahnı asistanı grubunuza qatılır.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -127,20 +131,20 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMen {bot}!\nSesli söhbetlerde mahnı oxuda bilen botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave et.\n\nDesign By [RowlynBots 😝](https://t.me/NemesisChat).**""",
+    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən {bot}!\nSəsli Söhbətlərdə Mahnı Oxuda Bilən Botam. Ban yetkisiz, Sesi idare etme yetkisi verib, Asistanı gruba elave et.\n\nHazırlandı [ʙʀᴇɴᴅ ᴍᴜsɪᴄ🎙️](https://t.me/BrendSupport).**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✝️ ❰ Grubuna Elave Et ❱ ✝️", url=f"https://t.me/nemesismusicrobot?startgroup=true"
+                        "Grubuna Əlavə Et➕", url=f"https://t.me/BrendMusicRoBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎥 Asistan", url="https://t.me/nemesismusicasistan"
+                        "🎥 Asistan", url="https://t.me/BrendMusicRoBotAsistan"
                     ),
                     InlineKeyboardButton(
-                        "💬 Söhbet", url="https://t.me/Nemesischat"
+                        "💬 Söhbət Grubu", url="https://t.me/BrendSohbet"
                     )
                 ],
                 [
@@ -148,7 +152,7 @@ async def cbstart(_, query: CallbackQuery):
                         "⚡ Emrler" , callback_data= "cbmelumat"
                     ),
                     InlineKeyboardButton(
-                        "Resmi Kanal 🇦🇿", url=f"https://t.me/RowlynBots"
+                        "Resmi Kanal 🇦🇿", url=f"https://t.me/BrendUserBot"
                     )
                 ]
                 
