@@ -18,7 +18,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(command(["axtar"]))
+@Client.on_message(command(["videoaxtar"]))
 def axtar(client, message):
 
     user_id = message.from_user.id
@@ -27,7 +27,7 @@ def axtar(client, message):
 
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
-    m = message.reply("Axtarıram💎")
+    m = message.reply("Videonu Axtarıram Gözləyin...📍")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=5).to_dict()
@@ -45,11 +45,11 @@ def axtar(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Heçbir şey tapılmadı.\n\nBaşqa bir mahnı adı yoxlayın veya mahnı adını düzgün yazın."
+            "❌ Heçbir Şey tapılmadı.\n\nBaşqa bir mahnı adı yoxlayın veya mahnı adını düzgün yazın."
         )
         print(str(e))
         return
-    m.edit("`Mahnı yüklenir⏱`")
+    m.edit("`Gözləyin Video Yüklənir...♻️`")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
