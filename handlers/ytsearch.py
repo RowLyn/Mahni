@@ -23,7 +23,7 @@ async def ytaxtar(_, message: Message):
             await message.reply_text("Mene senedçi adı ya da Mahnı adı verin!")
             return
         query = message.text.split(None, 1)[1]
-        m = await message.reply_text("Axtarıram⚡")
+        m = await message.reply_text("Axtarıram...⚡")
         results = YoutubeSearch(query, max_results=4).to_dict()
         i = 0
         text = ""
