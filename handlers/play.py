@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("Mahnı Hazırlanır⚡")
+    lel = await message.reply("Mahnı Hazırlanır...⚡")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "NemesisMusicAsistan"
+        user.first_name = "BrendMusicRoBotAsistan"
     usar = user
     wew = usar.id
     try:
@@ -121,24 +121,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Evvelce meni Grubunun admini olarağ elave et!</b>")
+                        "<b>Əvvəlcə Məni Grubunun Admini Olarağ Əlave Et!</b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Salam Asistan bu gruba mahnı oxudmağ üçün qatıldı**")
+                        message.chat.id, "**Brend Music RoBot Bu Gruba Mahnı Oxudmağ Üçün Qatıldı**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>⚡ Flood Wait Xetası ⚡</b> \n\Salam {user.first_name}, Asistan  çoxlu qatılma istekleri olduğu üçün grubunuza qatılmadı. Asistan'ın grubda yasağlı olmadığından emin olun ve daha sonra yeniden yoxlayın!")
+                        f"<b>⚡ Flood Wait Xetası ⚡</b> \n\Salam {user.first_name}, Asistan  çoxlu qatılma istekleri olduğu üçün grubunuza qatılmadı.\nSonra Yenidən Yoxlayın!")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>Salam {user.first_name}, Asistan bu söhbette deyil, adminlerden göndermesini istiyin /asal asistanı elave etmek üçün əmr.</i>")
+            f"<i>Salam {user.first_name}, Asistan bu söhbette deyil, adminlerden Onu gruba əlavə etməsini istəyin Və Ya /asal Əmri İlə Asistanı Əlave Edin")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -147,7 +147,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ Daha uzun videolar {DURATION_LIMIT} Deqiqesinden Artığ oynadılamasına icaze verilmir!"
+                f"Video Müddəti {DURATION_LIMIT} Dəqiqədən Artığ Oynadılamasına İcazə Verilmir!"
             )
 
         file_name = get_file_name(audio)
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🔥 İnfo", url=f"https://t.me/NemesisMusicRoBot"),
-                InlineKeyboardButton("🎰 Kanal", url=f"https://t.me/RowlynBots"),
+                InlineKeyboardButton("🔥 Oxudur", url=f"https://t.me/BrendMusicRoBot"),
+                InlineKeyboardButton("🇦🇿 Rəsmi Kanal", url=f"https://t.me/BrendUserBot"),
             ],[
                 InlineKeyboardButton("📲 bağla", callback_data="cls"),
             ],
@@ -221,18 +221,18 @@ async def play(_, message: Message):
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"❌ Daha uzun videolar {DURATION_LIMIT} Deqiqesinden artığ oynadılamasına icaze verilmir!")
+             await lel.edit(f"Video Müddəti {DURATION_LIMIT} Dəqiqəsindən Artığ Oynadılamasına icazə verilmir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🏆 Dinlemey istediyin mahnı adı?")
-        await lel.edit("Gözleyin💸")
+            return await lel.edit("Dinləmək İstədiyin Mahnı Adı?")
+        await lel.edit("Gözləyin Sorğunuz Hazırlanır...🎶")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("Ses hazırlanır⚡")
+        await lel.edit("Səs Emal Edilir...⚡")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -255,7 +255,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "❌ Mahnı Tapılmadı.\n\nBaşqa bir mahnı yoxlayın veya sözleri düzgün yazın."
+                "❌ Mahnı Tapılmadı.\n\nBaşqa Bir mahnı yoxlayın və ya mahni adini düzgün yazın."
             )
             print(str(e))
             return
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🚀 İnfo", url=f"https://t.me/NemesisMusicRoBot"),
-                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/RowlynBots"),
+                InlineKeyboardButton("✅ Oxudur", url=f"https://t.me/BrendMusicRoBot"),
+                InlineKeyboardButton("🇦🇿 Rəsmi Kanal", url=f"https://t.me/BrendUserBot"),
             ],[
                 InlineKeyboardButton("📲 Bağla", callback_data="cls"),
             ],
@@ -272,7 +272,7 @@ async def play(_, message: Message):
     )
         
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"❌ Daha uzun videolar {DURATION_LIMIT} deqiqesinden artığ oynadılamasına icaze verilmir!")
+             await lel.edit(f"Video Müddəti {DURATION_LIMIT} Dəqiqəsindən artığ oynadılamasına icazə verilmir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
