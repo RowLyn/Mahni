@@ -127,7 +127,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Brend Music RoBot Bu Gruba Mahnı Oxudmağ Üçün Qatıldı**")
+                        message.chat.id, "**Baku City Music RoBot Bu Gruba Mahnı Oxudmağ Üçün Qatıldı**")
 
                 except UserAlreadyParticipant:
                     pass
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🔥 Oxudur", url=f"https://t.me/BrendMusicRoBot"),
-                InlineKeyboardButton("🇦🇿 Rəsmi Kanal", url=f"https://t.me/BrendUserBot"),
+                InlineKeyboardButton("🔥 Oxudur", url=f"https://t.me/BakuCityMusicRoBot"),
+                InlineKeyboardButton("🇦🇿 Rəsmi Kanal", url=f"https://t.me/BakuCity_Resmi"),
             ],[
                 InlineKeyboardButton("📲 bağla", callback_data="cls"),
             ],
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✅ Oxudur", url=f"https://t.me/BrendMusicRoBot"),
-                InlineKeyboardButton("🇦🇿 Rəsmi Kanal", url=f"https://t.me/BrendUserBot"),
+                InlineKeyboardButton("✅ Oxudur", url=f"https://t.me/BakuCityMusicRoBot"),
+                InlineKeyboardButton("🇦🇿 Rəsmi Kanal", url=f"https://t.me/BakuCity_Resmi"),
             ],[
                 InlineKeyboardButton("📲 Bağla", callback_data="cls"),
             ],
