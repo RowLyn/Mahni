@@ -16,12 +16,12 @@
     "BOT_NAME": {
       "description": "Müzik Oynatıcı Bot Adınız.",
       "required": false,
-      "value": ""
+      "value": "ʙᴀᴋᴜ ᴄɪᴛʏ ᴍᴜsɪᴄ ᴀsɪsᴛᴀɴ ⚜️"
     },
     "BOT_USARNAME": {
       "description": "Müzik Oynatıcı Bot Kullanıcı İsmi @ olmadan yazınız.",
       "required": true,
-      "value": ""
+      "value": "BakuCityMusicAsistan"
      
     },
     "API_ID": {
