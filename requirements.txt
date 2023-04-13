@@ -2,7 +2,6 @@ pyrogram==1.4.12
 py-tgcalls==0.8.6
 TgCrypto
 python-dotenv
-youtube_search_python 
 requests
 aiohttp[speedups]
 aiofiles
